@@ -24,6 +24,9 @@ jobs:
           sudo apt-get install -y libseccomp-dev
       - name: Update Go Config
         run: |
+          rm go.mod
+          rm go.sum
+          go mod init github.com/AkihiroSuda/clone3-workaround
           go get -u
           go mod tidy
           echo "-------"
