@@ -51,7 +51,7 @@ jobs:
           EOF
       - name: "Create release"
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.CLONE3_TOKEN }}
         run: |
           tag="${GITHUB_REF##*/}"
           asset_flags=()
