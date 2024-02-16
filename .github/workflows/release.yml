@@ -61,7 +61,14 @@ jobs:
       - name: upload
         run: |
           ls -al 
-          ls -al _artifacts
+                ls -al _artifacts
+                
+      - uses: actions/upload-artifact@v4
+        with:
+          name: clone3-workaround.x86_64
+          path: _artifacts/clone3-workaround.x86_64
+
+          
       - name: "Create release"
         env:
           GITHUB_TOKEN: ${{ secrets.CLONE3_TOKEN }}
