@@ -61,7 +61,7 @@ jobs:
       - name: upload
         run: |
           ls -al 
-          
+          ls -al _artifacts
       - name: "Create release"
         env:
           GITHUB_TOKEN: ${{ secrets.CLONE3_TOKEN }}
