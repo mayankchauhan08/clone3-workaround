@@ -26,9 +26,9 @@ jobs:
         run: |
           rm go.mod
           rm go.sum
-          go mod init github.com/AkihiroSuda/clone3-workaround
-          go get -u
+          go mod init github.com/AkihiroSuda/clone3-workaround          
           go mod tidy
+          go get -u
           echo "-------"
           cat go.mod
           echo "-------"
